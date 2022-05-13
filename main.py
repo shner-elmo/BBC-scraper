@@ -28,7 +28,7 @@ class BBCScraper:
         self.driver.get("https://www.bbc.com/")
 
         time.sleep(3)
-        self.driver.find_element(By.XPATH, '/html/body/div[10]/div[2]/div[1]/div[2]/div[2]/button[1]/p').click()
+        self.driver.find_element(By.XPATH, "//*[contains(text(), 'Consent')]").click()
         self.driver.find_element(By.XPATH, '//*[@id="bbccookies-continue-button"]/span[2]').click()
 
     def _close_popup(self):
